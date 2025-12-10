@@ -28,8 +28,8 @@ interface Agent {
 const mockAgents: Agent[] = [
   {
     id: '1',
-    name: 'Sarah Johnson',
-    email: 'sarah.johnson@helio.com',
+    name: 'Funmi Adeyemi',
+    email: 'funmi.adeyemi@helio.com',
     role: 'Senior Agent',
     department: 'Customer Support',
     status: 'Active',
@@ -38,8 +38,8 @@ const mockAgents: Agent[] = [
   },
   {
     id: '2',
-    name: 'Michael Chen',
-    email: 'michael.chen@helio.com',
+    name: 'Emeka Nwankwo',
+    email: 'emeka.nwankwo@helio.com',
     role: 'Agent',
     department: 'Technical Support',
     status: 'Active',
@@ -48,8 +48,8 @@ const mockAgents: Agent[] = [
   },
   {
     id: '3',
-    name: 'Emily Rodriguez',
-    email: 'emily.rodriguez@helio.com',
+    name: 'Ngozi Okafor',
+    email: 'ngozi.okafor@helio.com',
     role: 'Team Lead',
     department: 'Customer Support',
     status: 'Active',
@@ -58,8 +58,8 @@ const mockAgents: Agent[] = [
   },
   {
     id: '4',
-    name: 'David Kim',
-    email: 'david.kim@helio.com',
+    name: 'Tunde Bakare',
+    email: 'tunde.bakare@helio.com',
     role: 'Agent',
     department: 'Billing',
     status: 'Active',
@@ -68,8 +68,8 @@ const mockAgents: Agent[] = [
   },
   {
     id: '5',
-    name: 'Lisa Anderson',
-    email: 'lisa.anderson@helio.com',
+    name: 'Chioma Eze',
+    email: 'chioma.eze@helio.com',
     role: 'Senior Agent',
     department: 'Technical Support',
     status: 'Inactive',
@@ -359,10 +359,10 @@ export function AdminPanel() {
 
               <div className="grid grid-cols-2 gap-6">
                 {[
-                  { name: 'Customer Support', agents: 12, lead: 'Emily Rodriguez' },
-                  { name: 'Technical Support', agents: 8, lead: 'Michael Chen' },
-                  { name: 'Billing', agents: 6, lead: 'David Kim' },
-                  { name: 'Sales', agents: 10, lead: 'Sarah Johnson' },
+                  { name: 'Customer Support', agents: 12, lead: 'Ngozi Okafor' },
+                  { name: 'Technical Support', agents: 8, lead: 'Emeka Nwankwo' },
+                  { name: 'Billing', agents: 6, lead: 'Tunde Bakare' },
+                  { name: 'Sales', agents: 10, lead: 'Funmi Adeyemi' },
                 ].map((dept, idx) => (
                   <div key={idx} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
                     <div className="flex items-start justify-between mb-4">

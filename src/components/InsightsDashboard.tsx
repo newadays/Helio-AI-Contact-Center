@@ -57,11 +57,11 @@ const sentimentData = [
 ];
 
 const agentPerformance = [
-  { name: 'Sarah Johnson', calls: 156, avgTime: '3:42', satisfaction: 4.8, resolved: 94 },
-  { name: 'Michael Chen', calls: 148, avgTime: '4:15', satisfaction: 4.7, resolved: 92 },
-  { name: 'Emily Rodriguez', calls: 142, avgTime: '3:58', satisfaction: 4.6, resolved: 89 },
-  { name: 'David Kim', calls: 138, avgTime: '4:32', satisfaction: 4.5, resolved: 88 },
-  { name: 'Lisa Anderson', calls: 135, avgTime: '4:05', satisfaction: 4.4, resolved: 86 },
+  { name: 'Funmi Adeyemi', calls: 156, avgTime: '3:42', satisfaction: 4.8, resolved: 94 },
+  { name: 'Emeka Nwankwo', calls: 148, avgTime: '4:15', satisfaction: 4.7, resolved: 92 },
+  { name: 'Ngozi Okafor', calls: 142, avgTime: '3:58', satisfaction: 4.6, resolved: 89 },
+  { name: 'Tunde Bakare', calls: 138, avgTime: '4:32', satisfaction: 4.5, resolved: 88 },
+  { name: 'Chioma Eze', calls: 135, avgTime: '4:05', satisfaction: 4.4, resolved: 86 },
 ];
 
 const weeklyTrends = [

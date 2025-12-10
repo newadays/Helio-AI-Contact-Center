@@ -33,7 +33,7 @@ interface RoutingRule {
 const mockPhoneNumbers: PhoneNumber[] = [
   {
     id: '1',
-    number: '+1 (800) 555-0100',
+    number: '+234 800 555 0100',
     name: 'Main Customer Support',
     status: 'Active',
     assignedTo: 'Customer Support Queue',
@@ -41,7 +41,7 @@ const mockPhoneNumbers: PhoneNumber[] = [
   },
   {
     id: '2',
-    number: '+1 (800) 555-0101',
+    number: '+234 800 555 0101',
     name: 'Technical Support',
     status: 'Active',
     assignedTo: 'Technical Support Queue',
@@ -49,7 +49,7 @@ const mockPhoneNumbers: PhoneNumber[] = [
   },
   {
     id: '3',
-    number: '+1 (800) 555-0102',
+    number: '+234 800 555 0102',
     name: 'Billing Department',
     status: 'Active',
     assignedTo: 'Billing Queue',
@@ -57,7 +57,7 @@ const mockPhoneNumbers: PhoneNumber[] = [
   },
   {
     id: '4',
-    number: '+1 (800) 555-0103',
+    number: '+234 800 555 0103',
     name: 'VIP Customer Line',
     status: 'Active',
     assignedTo: 'VIP Agent Group',
