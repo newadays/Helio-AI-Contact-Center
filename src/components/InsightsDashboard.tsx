@@ -78,108 +78,110 @@ export function InsightsDashboard() {
   const [dateRange, setDateRange] = useState('7days');
 
   return (
-    <div className="min-h-[calc(100vh-140px)] bg-gray-50 p-6">
+    <div className="min-h-[calc(100vh-140px)] bg-gray-50 p-3 md:p-6">
       {/* Header Controls */}
-      <div className="mb-6 flex items-center justify-between">
+      <div className="mb-4 md:mb-6 flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div>
-          <h2 className="text-2xl text-gray-900 mb-1">Analytics & Insights</h2>
-          <p className="text-gray-500">Real-time contact center performance metrics</p>
+          <h2 className="text-xl md:text-2xl text-gray-900 mb-1">Analytics & Insights</h2>
+          <p className="text-sm md:text-base text-gray-500">Real-time contact center performance metrics</p>
         </div>
-        <div className="flex items-center gap-3">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-2 md:gap-3 w-full sm:w-auto">
           <select
             value={dateRange}
             onChange={(e) => setDateRange(e.target.value)}
-            className="px-4 py-2 border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 md:px-4 py-2 text-sm md:text-base border border-gray-300 rounded-lg text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="today">Today</option>
             <option value="7days">Last 7 Days</option>
             <option value="30days">Last 30 Days</option>
             <option value="90days">Last 90 Days</option>
           </select>
-          <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+          <button className="flex items-center justify-center gap-2 px-3 md:px-4 py-2 text-sm md:text-base bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
             <Download className="w-4 h-4" />
-            Export Report
+            <span className="hidden sm:inline">Export Report</span>
+            <span className="sm:hidden">Export</span>
           </button>
         </div>
       </div>
 
       {/* KPI Cards */}
-      <div className="grid grid-cols-4 gap-6 mb-6">
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 mb-4 md:mb-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 md:p-6">
           <div className="flex items-center justify-between mb-2">
-            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
-              <Phone className="w-5 h-5 text-blue-600" />
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+              <Phone className="w-4 h-4 md:w-5 md:h-5 text-blue-600" />
             </div>
-            <div className="flex items-center gap-1 text-green-600 text-sm">
-              <TrendingUp className="w-4 h-4" />
+            <div className="flex items-center gap-1 text-green-600 text-xs md:text-sm">
+              <TrendingUp className="w-3 h-3 md:w-4 md:h-4" />
               <span>+12%</span>
             </div>
           </div>
-          <h3 className="text-2xl text-gray-900 mb-1">16,020</h3>
-          <p className="text-sm text-gray-500">Total Calls</p>
+          <h3 className="text-xl md:text-2xl text-gray-900 mb-1">16,020</h3>
+          <p className="text-xs md:text-sm text-gray-500">Total Calls</p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 md:p-6">
           <div className="flex items-center justify-between mb-2">
-            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center">
-              <Clock className="w-5 h-5 text-purple-600" />
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-purple-100 rounded-lg flex items-center justify-center">
+              <Clock className="w-4 h-4 md:w-5 md:h-5 text-purple-600" />
             </div>
-            <div className="flex items-center gap-1 text-green-600 text-sm">
-              <TrendingDown className="w-4 h-4" />
+            <div className="flex items-center gap-1 text-green-600 text-xs md:text-sm">
+              <TrendingDown className="w-3 h-3 md:w-4 md:h-4" />
               <span>-8%</span>
             </div>
           </div>
-          <h3 className="text-2xl text-gray-900 mb-1">4:12</h3>
-          <p className="text-sm text-gray-500">Avg Handle Time</p>
+          <h3 className="text-xl md:text-2xl text-gray-900 mb-1">4:12</h3>
+          <p className="text-xs md:text-sm text-gray-500">Avg Handle Time</p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 md:p-6">
           <div className="flex items-center justify-between mb-2">
-            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center">
-              <CheckCircle className="w-5 h-5 text-green-600" />
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-green-100 rounded-lg flex items-center justify-center">
+              <CheckCircle className="w-4 h-4 md:w-5 md:h-5 text-green-600" />
             </div>
-            <div className="flex items-center gap-1 text-green-600 text-sm">
-              <TrendingUp className="w-4 h-4" />
+            <div className="flex items-center gap-1 text-green-600 text-xs md:text-sm">
+              <TrendingUp className="w-3 h-3 md:w-4 md:h-4" />
               <span>+5%</span>
             </div>
           </div>
-          <h3 className="text-2xl text-gray-900 mb-1">89.4%</h3>
-          <p className="text-sm text-gray-500">First Call Resolution</p>
+          <h3 className="text-xl md:text-2xl text-gray-900 mb-1">89.4%</h3>
+          <p className="text-xs md:text-sm text-gray-500">First Call Resolution</p>
         </div>
 
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-3 md:p-6">
           <div className="flex items-center justify-between mb-2">
-            <div className="w-10 h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
-              <Smile className="w-5 h-5 text-yellow-600" />
+            <div className="w-8 h-8 md:w-10 md:h-10 bg-yellow-100 rounded-lg flex items-center justify-center">
+              <Smile className="w-4 h-4 md:w-5 md:h-5 text-yellow-600" />
             </div>
-            <div className="flex items-center gap-1 text-green-600 text-sm">
-              <TrendingUp className="w-4 h-4" />
+            <div className="flex items-center gap-1 text-green-600 text-xs md:text-sm">
+              <TrendingUp className="w-3 h-3 md:w-4 md:h-4" />
               <span>+3%</span>
             </div>
           </div>
-          <h3 className="text-2xl text-gray-900 mb-1">4.6/5.0</h3>
-          <p className="text-sm text-gray-500">Customer Satisfaction</p>
+          <h3 className="text-xl md:text-2xl text-gray-900 mb-1">4.6/5.0</h3>
+          <p className="text-xs md:text-sm text-gray-500">Customer Satisfaction</p>
         </div>
       </div>
 
       {/* Charts Row 1 */}
-      <div className="grid grid-cols-3 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-4 md:gap-6 mb-4 md:mb-6">
         {/* Call Volume Over Time */}
-        <div className="col-span-2 bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="lg:col-span-2 bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
           <div className="mb-4">
-            <h3 className="text-lg text-gray-900 mb-1">Call Volume Trend</h3>
-            <p className="text-sm text-gray-500">Hourly distribution over 24 hours</p>
+            <h3 className="text-base md:text-lg text-gray-900 mb-1">Call Volume Trend</h3>
+            <p className="text-xs md:text-sm text-gray-500">Hourly distribution over 24 hours</p>
           </div>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={250}>
             <LineChart data={callVolumeData}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-              <XAxis dataKey="time" stroke="#6b7280" />
-              <YAxis stroke="#6b7280" />
+              <XAxis dataKey="time" stroke="#6b7280" style={{ fontSize: '12px' }} />
+              <YAxis stroke="#6b7280" style={{ fontSize: '12px' }} />
               <Tooltip
                 contentStyle={{
                   backgroundColor: '#fff',
                   border: '1px solid #e5e7eb',
                   borderRadius: '8px',
+                  fontSize: '12px',
                 }}
               />
               <Line
@@ -187,62 +189,64 @@ export function InsightsDashboard() {
                 dataKey="calls"
                 stroke="#2563eb"
                 strokeWidth={2}
-                dot={{ fill: '#2563eb', r: 4 }}
-                activeDot={{ r: 6 }}
+                dot={{ fill: '#2563eb', r: 3 }}
+                activeDot={{ r: 5 }}
               />
             </LineChart>
           </ResponsiveContainer>
         </div>
 
         {/* Sentiment Distribution */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
           <div className="mb-4">
-            <h3 className="text-lg text-gray-900 mb-1">Sentiment Analysis</h3>
-            <p className="text-sm text-gray-500">Customer emotion distribution</p>
+            <h3 className="text-base md:text-lg text-gray-900 mb-1">Sentiment Analysis</h3>
+            <p className="text-xs md:text-sm text-gray-500">Customer emotion distribution</p>
           </div>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={250}>
             <PieChart>
               <Pie
                 data={sentimentData}
                 cx="50%"
                 cy="50%"
-                innerRadius={60}
-                outerRadius={100}
+                innerRadius={50}
+                outerRadius={80}
                 paddingAngle={5}
                 dataKey="value"
                 label={({ name, value }) => `${name} ${value}%`}
+                style={{ fontSize: '11px' }}
               >
                 {sentimentData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
               </Pie>
-              <Tooltip />
+              <Tooltip contentStyle={{ fontSize: '12px' }} />
             </PieChart>
           </ResponsiveContainer>
         </div>
       </div>
 
       {/* Charts Row 2 */}
-      <div className="grid grid-cols-2 gap-6 mb-6">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 md:gap-6 mb-4 md:mb-6">
         {/* Weekly Trends */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
           <div className="mb-4">
-            <h3 className="text-lg text-gray-900 mb-1">Weekly Performance</h3>
-            <p className="text-sm text-gray-500">Calls vs. Resolved by day</p>
+            <h3 className="text-base md:text-lg text-gray-900 mb-1">Weekly Performance</h3>
+            <p className="text-xs md:text-sm text-gray-500">Calls vs. Resolved by day</p>
           </div>
-          <ResponsiveContainer width="100%" height={300}>
+          <ResponsiveContainer width="100%" height={250}>
             <BarChart data={weeklyTrends}>
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
-              <XAxis dataKey="day" stroke="#6b7280" />
-              <YAxis stroke="#6b7280" />
+              <XAxis dataKey="day" stroke="#6b7280" style={{ fontSize: '12px' }} />
+              <YAxis stroke="#6b7280" style={{ fontSize: '12px' }} />
               <Tooltip
                 contentStyle={{
                   backgroundColor: '#fff',
                   border: '1px solid #e5e7eb',
                   borderRadius: '8px',
+                  fontSize: '12px',
                 }}
               />
-              <Legend />
+              <Legend wrapperStyle={{ fontSize: '12px' }} />
               <Bar dataKey="calls" fill="#3b82f6" radius={[4, 4, 0, 0]} />
               <Bar dataKey="resolved" fill="#10b981" radius={[4, 4, 0, 0]} />
             </BarChart>
@@ -250,17 +254,17 @@ export function InsightsDashboard() {
         </div>
 
         {/* Top Call Reasons */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
+        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-4 md:p-6">
           <div className="mb-4">
-            <h3 className="text-lg text-gray-900 mb-1">Top Call Reasons</h3>
-            <p className="text-sm text-gray-500">Most common customer issues</p>
+            <h3 className="text-base md:text-lg text-gray-900 mb-1">Top Call Reasons</h3>
+            <p className="text-xs md:text-sm text-gray-500">Most common customer issues</p>
           </div>
-          <div className="space-y-4">
+          <div className="space-y-3 md:space-y-4">
             {topCallReasons.map((item, idx) => (
               <div key={idx}>
                 <div className="flex items-center justify-between mb-2">
-                  <span className="text-sm text-gray-700">{item.reason}</span>
-                  <span className="text-sm text-gray-900">{item.count}</span>
+                  <span className="text-xs md:text-sm text-gray-700">{item.reason}</span>
+                  <span className="text-xs md:text-sm text-gray-900">{item.count}</span>
                 </div>
                 <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
                   <div
@@ -276,30 +280,32 @@ export function InsightsDashboard() {
 
       {/* Agent Performance Leaderboard */}
       <div className="bg-white rounded-lg shadow-sm border border-gray-200">
-        <div className="p-6 border-b border-gray-200">
-          <h3 className="text-lg text-gray-900 mb-1">Agent Performance Leaderboard</h3>
-          <p className="text-sm text-gray-500">Top performing agents this week</p>
+        <div className="p-4 md:p-6 border-b border-gray-200">
+          <h3 className="text-base md:text-lg text-gray-900 mb-1">Agent Performance Leaderboard</h3>
+          <p className="text-xs md:text-sm text-gray-500">Top performing agents this week</p>
         </div>
-        <div className="overflow-x-auto">
+
+        {/* Desktop Table */}
+        <div className="hidden md:block overflow-x-auto">
           <table className="w-full">
             <thead className="bg-gray-50 border-b border-gray-200">
               <tr>
-                <th className="px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
+                <th className="px-4 lg:px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
                   Rank
                 </th>
-                <th className="px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
+                <th className="px-4 lg:px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
                   Agent Name
                 </th>
-                <th className="px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
+                <th className="px-4 lg:px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
                   Total Calls
                 </th>
-                <th className="px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
+                <th className="px-4 lg:px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
                   Avg Handle Time
                 </th>
-                <th className="px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
+                <th className="px-4 lg:px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
                   Satisfaction
                 </th>
-                <th className="px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
+                <th className="px-4 lg:px-6 py-3 text-left text-xs text-gray-500 uppercase tracking-wider">
                   Resolution Rate
                 </th>
               </tr>
@@ -307,10 +313,10 @@ export function InsightsDashboard() {
             <tbody className="bg-white divide-y divide-gray-200">
               {agentPerformance.map((agent, idx) => (
                 <tr key={idx} className="hover:bg-gray-50 transition-colors">
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-4 lg:px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
                       <div
-                        className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm ${
+                        className={`w-7 h-7 md:w-8 md:h-8 rounded-full flex items-center justify-center text-white text-sm ${
                           idx === 0
                             ? 'bg-yellow-500'
                             : idx === 1
@@ -324,27 +330,27 @@ export function InsightsDashboard() {
                       </div>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-4 lg:px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center">
-                      <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 mr-3">
+                      <div className="w-8 h-8 md:w-10 md:h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xs md:text-sm mr-3">
                         {agent.name.split(' ').map(n => n[0]).join('')}
                       </div>
-                      <span className="text-gray-900">{agent.name}</span>
+                      <span className="text-sm md:text-base text-gray-900">{agent.name}</span>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-900">
+                  <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-sm md:text-base text-gray-900">
                     {agent.calls}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-gray-900">
+                  <td className="px-4 lg:px-6 py-4 whitespace-nowrap text-sm md:text-base text-gray-900">
                     {agent.avgTime}
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-4 lg:px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center gap-2">
                       <div className="flex">
                         {[...Array(5)].map((_, i) => (
                           <svg
                             key={i}
-                            className={`w-4 h-4 ${
+                            className={`w-3 h-3 md:w-4 md:h-4 ${
                               i < Math.floor(agent.satisfaction)
                                 ? 'text-yellow-500 fill-yellow-500'
                                 : 'text-gray-300'
@@ -356,10 +362,10 @@ export function InsightsDashboard() {
                           </svg>
                         ))}
                       </div>
-                      <span className="text-sm text-gray-600">{agent.satisfaction}</span>
+                      <span className="text-xs md:text-sm text-gray-600">{agent.satisfaction}</span>
                     </div>
                   </td>
-                  <td className="px-6 py-4 whitespace-nowrap">
+                  <td className="px-4 lg:px-6 py-4 whitespace-nowrap">
                     <div className="flex items-center gap-2">
                       <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden max-w-[100px]">
                         <div
@@ -367,13 +373,84 @@ export function InsightsDashboard() {
                           style={{ width: `${agent.resolved}%` }}
                         />
                       </div>
-                      <span className="text-sm text-gray-900">{agent.resolved}%</span>
+                      <span className="text-xs md:text-sm text-gray-900">{agent.resolved}%</span>
                     </div>
                   </td>
                 </tr>
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Cards */}
+        <div className="md:hidden p-3 space-y-3">
+          {agentPerformance.map((agent, idx) => (
+            <div key={idx} className="border border-gray-200 rounded-lg p-4">
+              <div className="flex items-center gap-3 mb-3">
+                <div
+                  className={`w-8 h-8 rounded-full flex items-center justify-center text-white text-sm flex-shrink-0 ${
+                    idx === 0
+                      ? 'bg-yellow-500'
+                      : idx === 1
+                      ? 'bg-gray-400'
+                      : idx === 2
+                      ? 'bg-orange-600'
+                      : 'bg-gray-300'
+                  }`}
+                >
+                  {idx + 1}
+                </div>
+                <div className="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-sm flex-shrink-0">
+                  {agent.name.split(' ').map(n => n[0]).join('')}
+                </div>
+                <span className="text-gray-900 flex-1">{agent.name}</span>
+              </div>
+              <div className="grid grid-cols-2 gap-3 text-sm">
+                <div>
+                  <p className="text-gray-500 text-xs">Total Calls</p>
+                  <p className="text-gray-900">{agent.calls}</p>
+                </div>
+                <div>
+                  <p className="text-gray-500 text-xs">Avg Time</p>
+                  <p className="text-gray-900">{agent.avgTime}</p>
+                </div>
+                <div>
+                  <p className="text-gray-500 text-xs">Satisfaction</p>
+                  <div className="flex items-center gap-1">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <svg
+                          key={i}
+                          className={`w-3 h-3 ${
+                            i < Math.floor(agent.satisfaction)
+                              ? 'text-yellow-500 fill-yellow-500'
+                              : 'text-gray-300'
+                          }`}
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                      ))}
+                    </div>
+                    <span className="text-xs text-gray-600">{agent.satisfaction}</span>
+                  </div>
+                </div>
+                <div>
+                  <p className="text-gray-500 text-xs">Resolution</p>
+                  <div className="flex items-center gap-2">
+                    <div className="flex-1 h-2 bg-gray-100 rounded-full overflow-hidden">
+                      <div
+                        className="h-full bg-green-600 rounded-full"
+                        style={{ width: `${agent.resolved}%` }}
+                      />
+                    </div>
+                    <span className="text-xs text-gray-900">{agent.resolved}%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
