@@ -1,0 +1,17 @@
+# Robots.txt for Helio AI Contact Center
+# https://helio-ai-contact-center.vercel.app/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://helio-ai-contact-center.vercel.app/sitemap.xml
+
+# Crawl delay (optional - be nice to servers)
+Crawl-delay: 10
+
+# Block access to any potential admin or API routes
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /*.json$
